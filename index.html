@@ -15,6 +15,25 @@ body {
   color: white;
 }
 
+  .brand-logos {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.brand-logos img {
+  height: 50px;
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
+  transition: 0.3s;
+}
+
+.brand-logos img:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
 /* HEADER */
 header {
   display: flex;
@@ -237,13 +256,23 @@ nav a {
 
 <section class="cert">
   <h2>CERTIFIED IN LUXURY BRANDS</h2>
-  <p>Mercedes-Benz • BMW</p>
+
+  <div class="brand-logos">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/90/Mercedes-Logo.svg">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/BMW.svg">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Audi_logo.svg">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Lexus_logo.svg">
+  </div>
 </section>
 
 <div class="bottom-bar">
   <div>📞 516-249-8495</div>
   <div>📍 846 Main Street, Farmingdale NY</div>
-  <div>⏰ Mon-Fri 8AM–6PM</div>
+  <div>
+    ⏰ Mon–Fri: 8AM–5PM<br>
+    Sat: 8AM–3PM<br>
+    Sun: Closed
+  </div>
 </div>
 
 </body>
