@@ -5,13 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Willie's Auto Service</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background: #0b0b0b;
+  background: #111;
   color: white;
 }
 
@@ -22,110 +22,106 @@ header {
   align-items: center;
   padding: 20px 40px;
   background: black;
-  position: sticky;
-  top: 0;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 22px;
 }
 
 nav a {
   color: white;
   margin-left: 20px;
   text-decoration: none;
-  font-weight: 500;
 }
 
 /* HERO */
 .hero {
-  height: 90vh;
-  background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),
-  url('https://images.unsplash.com/photo-1619767886558-efdc259cde1a');
-  background-size: cover;
-  background-position: center;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
-  text-align: center;
+  background: #f5f5f5;
+  color: black;
 }
 
-.hero img {
-  width: 380px;
-  max-width: 90%;
-  filter: drop-shadow(0 0 10px rgba(255,0,0,0.5));
+.hero-text {
+  flex: 1;
+  padding: 60px;
 }
 
-.hero h2 {
+.hero-text h1 {
   font-size: 48px;
-  margin-bottom: 10px;
+  color: red;
 }
 
-.hero p {
-  font-size: 18px;
-  margin-bottom: 25px;
-  color: #ccc;
+.hero-text h2 {
+  font-size: 28px;
 }
 
-.btn {
+.hero-text p {
+  color: #555;
+}
+
+.hero-buttons a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 15px 25px;
   background: red;
-  padding: 15px 30px;
-  font-size: 18px;
   color: white;
   text-decoration: none;
-  border-radius: 8px;
-  transition: 0.3s;
+  margin-right: 10px;
 }
 
-.btn:hover {
-  background: darkred;
+.hero-image {
+  flex: 1;
+  background: url('https://images.unsplash.com/photo-1619767886558-efdc259cde1a') center/cover;
+  height: 400px;
 }
 
-/* SECTIONS */
-.section {
-  padding: 70px 20px;
+/* FEATURES BAR */
+.features {
+  display: flex;
+  justify-content: space-around;
+  background: black;
+  padding: 20px;
   text-align: center;
 }
 
-.section h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
+.features div {
+  flex: 1;
 }
 
-/* GRID */
+/* SERVICES */
+.section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
   gap: 20px;
-  margin-top: 30px;
 }
 
 .card {
-  background: #1a1a1a;
-  padding: 25px;
-  border-radius: 12px;
-  transition: 0.3s;
+  background: white;
+  color: black;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  background: #222;
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
 }
 
-/* HOURS */
-.hours {
-  background: #111;
-  display: inline-block;
-  padding: 25px;
-  border-radius: 12px;
-  margin-top: 20px;
-  text-align: left;
-  font-size: 16px;
+.card p {
+  padding: 15px;
 }
 
-/* CALL BAR */
+/* FOOTER */
+footer {
+  background: black;
+  padding: 20px;
+  text-align: center;
+}
+
 .call-bar {
   position: fixed;
   bottom: 0;
@@ -134,106 +130,72 @@ nav a {
   text-align: center;
   padding: 15px;
 }
-
-.call-bar a {
-  color: white;
-  font-size: 20px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* FOOTER */
-footer {
-  background: black;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-}
 </style>
 </head>
 
 <body>
 
 <header>
-  <h1>Willie's Auto Service</h1>
+  <h2>Willie's Service</h2>
   <nav>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
+    <a href="#">Home</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
   </nav>
 </header>
 
 <section class="hero">
-  <img src="logo.png" alt="logo">
-  <h2>Luxury-Level Auto Repair</h2>
-  <p>Certified Mercedes & BMW Specialists • Modern & Domestic Vehicles</p>
-  <a href="tel:5162498495" class="btn">Call Now</a>
+  <div class="hero-text">
+    <h1>Willie's Service</h1>
+    <h2>Expert Auto Repair You Can Trust</h2>
+    <p>Specializing in all modern and domestic vehicles. Certified in Mercedes & BMW.</p>
+
+    <div class="hero-buttons">
+      <a href="tel:5162498495">Call Now</a>
+      <a href="#">Get Directions</a>
+    </div>
+  </div>
+
+  <div class="hero-image"></div>
 </section>
 
-<section class="section" id="services">
-  <h2>Our Services</h2>
-  <div class="grid">
-    <div class="card">Oil Changes</div>
-    <div class="card">Brake Repair</div>
-    <div class="card">Diagnostics</div>
-    <div class="card">Transmission</div>
-    <div class="card">Luxury Vehicle Service</div>
-  </div>
+<section class="features">
+  <div>Experienced</div>
+  <div>Quality Service</div>
+  <div>Honest & Reliable</div>
+  <div>Fast Turnaround</div>
 </section>
 
 <section class="section">
-  <h2>Why Choose Us</h2>
+  <h2>Our Services</h2>
   <div class="grid">
-    <div class="card">Certified Mercedes & BMW Specialists</div>
-    <div class="card">Honest Pricing</div>
-    <div class="card">Fast Turnaround</div>
-    <div class="card">Experienced Technicians</div>
-  </div>
-</section>
-
-<section class="section" id="contact">
-  <h2>Contact</h2>
-  <p>📞 516-249-8495</p>
-  <p>📍 846 Main Street, Farmingdale, NY</p>
-
-  <div class="hours">
-    <h3>Shop Hours</h3>
-    <p id="status">Checking...</p>
-    <p>Mon–Fri: 8AM–6PM</p>
-    <p>Sat: 8AM–2PM</p>
-    <p>Sun: Closed</p>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc">
+      <p>Oil Changes</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537">
+      <p>Brake Service</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0">
+      <p>Diagnostics</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1615906655593-ad0386982a0f">
+      <p>Engine Repair</p>
+    </div>
   </div>
 </section>
 
 <footer>
-  © 2026 Willie's Auto Service
+  <p>📞 516-249-8495</p>
+  <p>846 Main Street, Farmingdale, NY</p>
 </footer>
 
 <div class="call-bar">
-  <a href="tel:5162498495">📞 Call Now: 516-249-8495</a>
+  📞 Call Now: 516-249-8495
 </div>
-
-<script>
-function updateStatus() {
-  const now = new Date();
-  const d = now.getDay();
-  const h = now.getHours();
-  let open = false;
-
-  if (d >= 1 && d <= 5 && h >= 8 && h < 18) open = true;
-  if (d === 6 && h >= 8 && h < 14) open = true;
-
-  const el = document.getElementById('status');
-
-  if (open) {
-    el.innerHTML = '🟢 OPEN NOW';
-    el.style.color = 'lime';
-  } else {
-    el.innerHTML = '🔴 CLOSED';
-    el.style.color = 'red';
-  }
-}
-updateStatus();
-</script>
 
 </body>
 </html>
