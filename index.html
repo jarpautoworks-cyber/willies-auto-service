@@ -22,19 +22,10 @@ body {
 /* HEADER */
 header {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 25px 40px 10px;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px 40px;
   background: black;
-}
-  .logo {
-  padding-top: 10px;
-}
-.logo img {
-  height: 110px;
-  position: relative;
-  top: 20px;
-  z-index: 10;
 }
 
 nav a {
@@ -45,28 +36,50 @@ nav a {
 
 .call { color: red; font-weight: bold; }
 
-.menu-toggle {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-}
-
 /* HERO */
 .hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background: linear-gradient(to right, #ffffff 50%, rgba(0,0,0,0.8)),
+  background: linear-gradient(to right, #ffffff 50%, rgba(0,0,0,0.85)),
               url('https://images.unsplash.com/photo-1619767886558-efdc259cde1a');
   background-size: cover;
-  min-height: 500px;
+  background-position: center;
+  min-height: 520px;
+  position: relative;
 }
 
-.hero-left { padding: 80px 60px; }
+/* LOGO IN HERO */
+.hero-logo {
+  position: absolute;
+  top: 60px;
+  left: 50px;
+  z-index: 10;
+}
 
-.hero-left h1 { font-size: 60px; }
-.hero-left h2 { font-size: 24px; }
-.hero-left p { color: #444; }
+.hero-logo img {
+  width: 140px;
+}
 
+/* HERO TEXT */
+.hero-left {
+  padding: 80px 60px;
+}
+
+.hero-left h1 {
+  font-size: 60px;
+  color: black;
+}
+
+.hero-left h2 {
+  font-size: 24px;
+  color: black;
+}
+
+.hero-left p {
+  color: #444;
+}
+
+/* BUTTONS */
 .btn-red, .btn-dark {
   padding: 12px 20px;
   text-decoration: none;
@@ -105,7 +118,11 @@ nav a {
   overflow: hidden;
 }
 
-.card img { width: 100%; height: 150px; object-fit: cover; }
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
 
 /* REVIEWS */
 .review-grid {
@@ -118,14 +135,6 @@ nav a {
   background: #1a1a1a;
   padding: 20px;
   border-radius: 10px;
-}
-
-/* CERT */
-.brand-logos {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
 }
 
 /* FOOTER */
@@ -145,23 +154,24 @@ nav a {
     text-align: center;
   }
 
-  .menu-toggle { display: block; }
-
-  nav {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-  }
-
-  nav.active { display: flex; }
-
   nav a {
-    margin: 10px 0;
+    display: block;
+    margin: 8px 0;
   }
 
   .hero {
     grid-template-columns: 1fr;
     background: url('https://images.unsplash.com/photo-1619767886558-efdc259cde1a');
+    background-size: cover;
+  }
+
+  .hero-logo {
+    top: 20px;
+    left: 20px;
+  }
+
+  .hero-logo img {
+    width: 110px;
   }
 
   .hero-left {
@@ -169,29 +179,23 @@ nav a {
     text-align: center;
   }
 
-  .hero-left h1 { font-size: 34px; }
-  .hero-left h2 { font-size: 18px; }
+  .hero-left h1 {
+    font-size: 34px;
+  }
 
-  .features { flex-direction: column; gap: 15px; }
+  .hero-left h2 {
+    font-size: 18px;
+  }
+
+  .features {
+    flex-direction: column;
+    gap: 15px;
+  }
 
   .bottom-bar {
     grid-template-columns: 1fr;
     gap: 15px;
   }
-.hero {
-  position: relative;
-}
-
-/* LOGO INSIDE HERO */
-.hero-logo {
-  position: absolute;
-  top: 80px;
-  left: 60px;
-  z-index: 10;
-}
-
-.hero-logo img {
-  width: 140px;
 }
 </style>
 </head>
@@ -199,13 +203,9 @@ nav a {
 <body>
 
 <header>
-  
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
-  <nav id="nav-menu">
+  <nav>
     <a href="#">HOME</a>
     <a href="#">SERVICES</a>
-    <a href="#">CERTIFICATIONS</a>
     <a href="#">ABOUT</a>
     <a href="#">CONTACT</a>
   </nav>
@@ -216,9 +216,12 @@ nav a {
 </header>
 
 <section class="hero">
+
+  <!-- LOGO MOVED INTO WHITE SECTION -->
   <div class="hero-logo">
-  <img src="logo.png">
-</div>
+    <img src="logo.png">
+  </div>
+
   <div class="hero-left">
     <h1>WILLIE’S SERVICE</h1>
     <h2>EXPERT AUTO REPAIR YOU CAN TRUST</h2>
@@ -246,47 +249,11 @@ nav a {
   </div>
 </section>
 
-<section class="section">
-  <h2>WHAT OUR CUSTOMERS SAY</h2>
-
-  <div class="review-grid">
-    <div class="review">“Amazing service. Honest and reliable.” ⭐⭐⭐⭐⭐</div>
-    <div class="review">“Best mechanic around.” ⭐⭐⭐⭐⭐</div>
-    <div class="review">“Fair pricing and great work.” ⭐⭐⭐⭐⭐</div>
-  </div>
-
-  <div style="margin-top:30px;">
-    <a href="https://g.page/r/CUl4cyc1e_S6EBM/review" class="btn-red" target="_blank">Leave Review</a>
-    <br><br>
-    <a href="https://www.google.com/search?q=Willie's+Service+Farmingdale+NY" target="_blank" class="btn-dark">View Reviews</a>
-  </div>
-</section>
-
-<section class="section">
-  <h2>FARMINGDALE NY AUTO REPAIR</h2>
-  <p style="max-width:700px; margin:auto;">
-    Willie’s Service provides expert auto repair in Farmingdale NY including BMW, Mercedes, Audi and more.
-    If you're searching for a reliable mechanic near you, call us today.
-  </p>
-</section>
-
-<section class="section">
-  <h2>FIND US</h2>
-  <iframe src="https://www.google.com/maps?q=846+Main+Street+Farmingdale+NY&output=embed"
-    width="100%" height="300" style="border:0; border-radius:10px;"></iframe>
-</section>
-
 <div class="bottom-bar">
   <div><strong>CALL</strong><br><a href="tel:5162498495" style="color:white;">516-249-8495</a></div>
   <div><strong>LOCATION</strong><br>846 Main Street, Farmingdale NY</div>
   <div><strong>HOURS</strong><br>Mon–Fri 8–5<br>Sat 8–3</div>
 </div>
-
-<script>
-function toggleMenu() {
-  document.getElementById("nav-menu").classList.toggle("active");
-}
-</script>
 
 </body>
 </html>
