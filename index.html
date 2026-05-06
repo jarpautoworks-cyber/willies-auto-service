@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Willie's Auto Service</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
 <style>
 * {
   box-sizing: border-box;
@@ -12,109 +14,12 @@
 
 body {
   margin: 0;
-  overflow-x: hidden;
-}
-
-/* Make everything flexible */
-.container, .row, .grid, .services, .brand-logos {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-/* Default desktop layout */
-.brand-logos {
-  justify-content: center;
-  gap: 40px;
-}
-
-/* Fix images */
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* 🔥 MOBILE FIX */
-@media (max-width: 768px) {
-
-  /* Stack EVERYTHING */
-  .container, .row, .grid, .services, .brand-logos {
-    flex-direction: column !important;
-    align-items: center;
-  }
-
-  /* Make sections full width */
-  div, section {
-    width: 100% !important;
-  }
-
-  /* Fix text sizing */
-  h1 {
-    font-size: 26px;
-    text-align: center;
-  }
-
-  h2 {
-    font-size: 20px;
-    text-align: center;
-  }
-
-  p {
-    font-size: 15px;
-    text-align: center;
-    padding: 0 10px;
-  }
-
-  /* Buttons full width */
-  button, .btn {
-    width: 100%;
-    max-width: 300px;
-    padding: 14px;
-  }
-}
-  .hero {
-  width: 100%;
-  height: auto;
-  padding: 60px 20px;
-  background-size: cover;
-  background-position: center;
-}
-
-/* Fix hero text */
-.hero h1, .hero h2, .hero p {
-  max-width: 100%;
-  word-wrap: break-word;
-}
-</style>  
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-
-<style>
-body {
-  margin: 0;
   font-family: 'Inter', sans-serif;
   background: #0b0b0b;
   color: white;
+  overflow-x: hidden;
 }
 
-.brand-logos {
-  display: flex;
-  justify-content: center;
-  gap: 60px;
-  margin-top: 25px;
-  align-items: center;
-}
-
-.brand-logos img {
-  height: 45px;
-  filter: grayscale(100%);
-  opacity: 0.7;
-  transition: 0.3s;
-}
-
-.brand-logos img:hover {
-  filter: none;
-  opacity: 1;
-  transform: scale(1.1);
-}
 /* HEADER */
 header {
   display: flex;
@@ -151,8 +56,6 @@ nav a {
   background-size: cover;
   background-position: center;
   min-height: 500px;
-}
-  .hero {
   box-shadow: inset 0 0 100px rgba(0,0,0,0.15);
 }
 
@@ -161,13 +64,12 @@ nav a {
 }
 
 .hero-left h1 {
-  font-size: 75px;
+  font-size: 70px;
   line-height: 1;
 }
 
 .hero-left h2 {
-  font-size: 30px;
-  letter-spacing: 1px;
+  font-size: 28px;
 }
 
 .hero-left p {
@@ -185,6 +87,7 @@ nav a {
   padding: 14px 24px;
   text-decoration: none;
   margin-right: 10px;
+  display: inline-block;
 }
 
 .btn-dark {
@@ -192,6 +95,7 @@ nav a {
   color: white;
   padding: 14px 24px;
   text-decoration: none;
+  display: inline-block;
 }
 
 /* FEATURES */
@@ -203,19 +107,10 @@ nav a {
   text-align: center;
 }
 
-.features div {
-  flex: 1;
-  font-size: 14px;
-}
-
 /* SERVICES */
 .section {
   padding: 60px 30px;
   text-align: center;
-}
-
-.section h2 {
-  margin-bottom: 30px;
 }
 
 .grid {
@@ -229,12 +124,6 @@ nav a {
   color: black;
   border-radius: 10px;
   overflow: hidden;
-  transition: 0.3s;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-}
-
-.card:hover {
-  transform: translateY(-8px);
 }
 
 .card img {
@@ -243,43 +132,7 @@ nav a {
   object-fit: cover;
 }
 
-.card p {
-  padding: 15px;
-  font-weight: 600;
-}
-
-/* CERTIFICATIONS */
-.cert {
-  background: black;
-  padding: 40px;
-  text-align: center;
-}
-
-.cert img {
-  height: 60px;
-  margin: 10px;
-}
-
-/* FOOTER BAR */
-.bottom-bar {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  background: #c40000;
-  padding: 25px;
-  text-align: center;
-  font-size: 14px;
-}
-
-.bottom-bar strong {
-  font-size: 13px;
-  letter-spacing: 1px;
-}
-
-.bottom-bar div {
-  text-align: center;
-}
-
-/* REVIEWS SECTION */
+/* REVIEWS */
 .reviews {
   background: #111;
 }
@@ -288,31 +141,89 @@ nav a {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
   gap: 20px;
-  margin-top: 30px;
 }
 
 .review {
   background: #1a1a1a;
-  padding: 25px;
+  padding: 20px;
   border-radius: 10px;
-  text-align: left;
 }
 
-.review p {
-  font-style: italic;
-  margin-bottom: 15px;
+/* CERTS */
+.cert {
+  background: black;
+  padding: 40px;
+  text-align: center;
 }
 
-.review strong {
-  color: gold;
+.brand-logos {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
-.review span {
-  display: block;
-  margin-top: 5px;
-  color: #aaa;
+.brand-logos img {
+  height: 45px;
 }
 
+/* FOOTER */
+.bottom-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: #c40000;
+  padding: 25px;
+  text-align: center;
+}
+
+/* ================= MOBILE FIX ================= */
+@media (max-width: 768px) {
+
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+
+  nav a {
+    display: block;
+    margin: 8px 0;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    background: url('https://images.unsplash.com/photo-1619767886558-efdc259cde1a');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .hero-left {
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .hero-left h1 {
+    font-size: 36px;
+  }
+
+  .hero-left h2 {
+    font-size: 20px;
+  }
+
+  .hero-left p {
+    color: #ddd;
+  }
+
+  .features {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .bottom-bar {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
 </style>
 </head>
 
@@ -360,61 +271,29 @@ nav a {
   <h2>COMPLETE AUTO REPAIR & MAINTENANCE</h2>
 
   <div class="grid">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc">
-      <p>OIL CHANGES</p>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537">
-      <p>BRAKE SERVICE</p>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0">
-      <p>DIAGNOSTICS</p>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1615906655593-ad0386982a0f">
-      <p>ENGINE REPAIR</p>
-    </div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc"><p>OIL CHANGES</p></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537"><p>BRAKE SERVICE</p></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0"><p>DIAGNOSTICS</p></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1615906655593-ad0386982a0f"><p>ENGINE REPAIR</p></div>
   </div>
 </section>
 
-  </section>
-
-<!-- PASTE REVIEWS HERE -->
 <section class="section reviews">
   <h2>WHAT OUR CUSTOMERS SAY</h2>
 
   <div class="review-grid">
-    <div class="review">
-      <p>“Amazing service. Honest, fast, and reliable. Highly recommend Willie’s!”</p>
-      <strong>★★★★★</strong>
-      <span>- Google Customer</span>
-    </div>
-
-    <div class="review">
-      <p>“Best mechanic around. Took care of my Mercedes quickly and professionally.”</p>
-      <strong>★★★★★</strong>
-      <span>- Google Customer</span>
-    </div>
-
-    <div class="review">
-      <p>“Fair pricing and great communication. Won’t go anywhere else.”</p>
-      <strong>★★★★★</strong>
-      <span>- Google Customer</span>
-    </div>
+    <div class="review"><p>“Amazing service. Honest, fast, and reliable.”</p><strong>★★★★★</strong></div>
+    <div class="review"><p>“Best mechanic around. Highly recommend.”</p><strong>★★★★★</strong></div>
+    <div class="review"><p>“Fair pricing and great communication.”</p><strong>★★★★★</strong></div>
   </div>
 
   <div style="margin-top:30px;">
-<a href="https://g.page/r/CUl4cyc1e_S6EBM/review" class="btn-red" target="_blank">
-  Leave Us a Google Review
-</a>
+    <a href="https://g.page/r/CUl4cyc1e_S6EBM/review" class="btn-red" target="_blank">
+      Leave Us a Google Review
+    </a>
   </div>
-
 </section>
+
 <section class="cert">
   <h2>CERTIFIED LUXURY SPECIALISTS</h2>
 
@@ -427,20 +306,9 @@ nav a {
 </section>
 
 <div class="bottom-bar">
-  <div>
-    <strong>CALL</strong><br>
-    516-249-8495
-  </div>
-  <div>
-    <strong>LOCATION</strong><br>
-    846 Main Street, Farmingdale NY
-  </div>
-  <div>
-    <strong>HOURS</strong><br>
-    Mon–Fri: 8AM–5PM<br>
-    Sat: 8AM–3PM<br>
-    Sun: Closed
-  </div>
+  <div><strong>CALL</strong><br>516-249-8495</div>
+  <div><strong>LOCATION</strong><br>846 Main Street, Farmingdale NY</div>
+  <div><strong>HOURS</strong><br>Mon–Fri: 8AM–5PM<br>Sat: 8AM–3PM</div>
 </div>
 
 </body>
