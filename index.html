@@ -4,25 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Willie's Auto Service</title>
+
 <meta name="description" content="Willie's Auto Service in Farmingdale NY. Expert auto repair, oil changes, brakes, diagnostics. Call 516-249-8495 today.">
 
-<meta name="keywords" content="auto repair Farmingdale NY, mechanic near me, brake service, oil change, BMW repair, Mercedes repair">
-
-<meta name="author" content="Willie's Auto Service">
-  
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
   background: #0b0b0b;
   color: white;
-  overflow-x: hidden;
 }
 
 /* HEADER */
@@ -32,89 +26,62 @@ header {
   align-items: center;
   padding: 15px 40px;
   background: black;
-  border-bottom: 1px solid #222;
 }
 
-.logo img {
-  height: 60px;
-}
+.logo img { height: 60px; }
 
 nav a {
   color: white;
   margin: 0 15px;
   text-decoration: none;
-  font-weight: 500;
 }
 
-.call {
-  color: red;
-  font-weight: bold;
-  font-size: 18px;
+.call { color: red; font-weight: bold; }
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
 }
 
 /* HERO */
 .hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background: linear-gradient(to right, #ffffff 50%, rgba(0,0,0,0.8)), 
+  background: linear-gradient(to right, #ffffff 50%, rgba(0,0,0,0.8)),
               url('https://images.unsplash.com/photo-1619767886558-efdc259cde1a');
   background-size: cover;
-  background-position: center;
   min-height: 500px;
-  box-shadow: inset 0 0 100px rgba(0,0,0,0.15);
 }
 
-.hero-left {
-  padding: 80px 70px;
-}
+.hero-left { padding: 80px 60px; }
 
-.hero-left h1 {
-  font-size: 70px;
-  line-height: 1;
-}
+.hero-left h1 { font-size: 60px; }
+.hero-left h2 { font-size: 24px; }
+.hero-left p { color: #444; }
 
-.hero-left h2 {
-  font-size: 28px;
-}
-
-.hero-left p {
-  color: #444;
-  max-width: 400px;
-}
-
-.hero-buttons {
-  margin-top: 20px;
-}
-
-.btn-red {
-  background: red;
-  color: white;
-  padding: 14px 24px;
-  text-decoration: none;
-  margin-right: 10px;
-  display: inline-block;
-}
-
-.btn-dark {
-  background: black;
-  color: white;
-  padding: 14px 24px;
+.btn-red, .btn-dark {
+  padding: 12px 20px;
   text-decoration: none;
   display: inline-block;
+  margin-top: 10px;
 }
+
+.btn-red { background: red; color: white; }
+.btn-dark { background: black; color: white; }
 
 /* FEATURES */
 .features {
   display: flex;
   justify-content: space-around;
-  background: #111;
   padding: 25px;
+  background: #111;
   text-align: center;
 }
 
-/* SERVICES */
+/* SECTIONS */
 .section {
-  padding: 60px 30px;
+  padding: 60px 20px;
   text-align: center;
 }
 
@@ -131,17 +98,9 @@ nav a {
   overflow: hidden;
 }
 
-.card img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-}
+.card img { width: 100%; height: 150px; object-fit: cover; }
 
 /* REVIEWS */
-.reviews {
-  background: #111;
-}
-
 .review-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
@@ -154,49 +113,14 @@ nav a {
   border-radius: 10px;
 }
 
-/* CERTS */
-.cert {
-  background: black;
-  padding: 40px;
-  text-align: center;
-}
-
+/* CERT */
 .brand-logos {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 30px;
   flex-wrap: wrap;
 }
 
-.brand-logos img {
-  height: 45px;
-}
-<section class="section">
-  <h2>FIND US</h2>
-
-  <iframe
-    src="https://www.google.com/maps?q=846+Main+Street+Farmingdale+NY&output=embed"
-    width="100%"
-    height="300"
-    style="border:0; border-radius:10px;"
-    allowfullscreen=""
-    loading="lazy">
-  </iframe>
-</section>
-<section class="section">
-  <h2>TRUSTED AUTO REPAIR IN FARMINGDALE, NY</h2>
-
-  <p style="max-width:700px; margin:auto; line-height:1.6;">
-    Willie’s Auto Service is your trusted local mechanic in Farmingdale, NY.
-    We provide expert auto repair, oil changes, brake service, diagnostics,
-    and engine repair for all makes and models including BMW, Mercedes-Benz,
-    Audi, and Lexus. 
-
-    If you're searching for a reliable “mechanic near me” in Farmingdale,
-    our certified technicians deliver honest, high-quality service to get you
-    back on the road fast. Call today or stop by our shop on Main Street.
-  </p>
-</section>  
 /* FOOTER */
 .bottom-bar {
   display: grid;
@@ -206,65 +130,15 @@ nav a {
   text-align: center;
 }
 
-/* ================= MOBILE FIX ================= */
+/* MOBILE */
 @media (max-width: 768px) {
 
   header {
     flex-direction: column;
     text-align: center;
-    padding: 15px;
   }
 
-  nav a {
-    display: block;
-    margin: 8px 0;
-  }
-
-  .hero {
-    grid-template-columns: 1fr;
-    background: url('https://images.unsplash.com/photo-1619767886558-efdc259cde1a');
-    background-size: cover;
-    background-position: center;
-  }
-
-  .hero-left {
-    padding: 40px 20px;
-    text-align: center;
-  }
-
-  .hero-left h1 {
-    font-size: 36px;
-  }
-
-  .hero-left h2 {
-    font-size: 20px;
-  }
-
-  .hero-left p {
-    color: #ddd;
-  }
-
-  .features {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .bottom-bar {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-}
-.menu-toggle {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-}
-
-/* MOBILE NAV */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
+  .menu-toggle { display: block; }
 
   nav {
     display: none;
@@ -272,13 +146,30 @@ nav a {
     width: 100%;
   }
 
+  nav.active { display: flex; }
+
   nav a {
-    padding: 10px 0;
-    border-top: 1px solid #222;
+    margin: 10px 0;
   }
 
-  nav.active {
-    display: flex;
+  .hero {
+    grid-template-columns: 1fr;
+    background: url('https://images.unsplash.com/photo-1619767886558-efdc259cde1a');
+  }
+
+  .hero-left {
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .hero-left h1 { font-size: 34px; }
+  .hero-left h2 { font-size: 18px; }
+
+  .features { flex-direction: column; gap: 15px; }
+
+  .bottom-bar {
+    grid-template-columns: 1fr;
+    gap: 15px;
   }
 }
 </style>
@@ -287,9 +178,7 @@ nav a {
 <body>
 
 <header>
-  <div class="logo">
-    <img src="logo.png">
-  </div>
+  <div class="logo"><img src="logo.png"></div>
 
   <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
@@ -302,7 +191,7 @@ nav a {
   </nav>
 
   <div class="call">
-    CALL NOW: <a href="tel:5162498495">516-249-8495</a>
+    <a href="tel:5162498495" style="color:red;">516-249-8495</a>
   </div>
 </header>
 
@@ -310,83 +199,71 @@ nav a {
   <div class="hero-left">
     <h1>WILLIE’S SERVICE</h1>
     <h2>EXPERT AUTO REPAIR YOU CAN TRUST</h2>
-    <p>Specializing in all modern and domestic vehicles. Certified in Mercedes-Benz and BMW.</p>
+    <p>Certified BMW & Mercedes specialists. Honest, fast, reliable service.</p>
 
-    <div class="hero-buttons">
-      <a href="tel:5162498495" class="btn-red">CALL NOW</a>
-      <a href="https://www.google.com/maps/dir/?api=1&destination=846+Main+Street+Farmingdale+NY" 
-   target="_blank" 
-   class="btn-dark">
-   GET DIRECTIONS
-</a>
-    </div>
+    <a href="tel:5162498495" class="btn-red">CALL NOW</a>
+    <a href="https://www.google.com/maps/dir/?api=1&destination=846+Main+Street+Farmingdale+NY" target="_blank" class="btn-dark">GET DIRECTIONS</a>
   </div>
 </section>
 
 <section class="features">
-  <div>EXPERIENCED<br>Certified Technicians</div>
-  <div>QUALITY SERVICE<br>Done Right First Time</div>
-  <div>HONEST & RELIABLE<br>Customer Satisfaction</div>
-  <div>FAST TURNAROUND<br>Back on Road Fast</div>
+  <div>EXPERIENCED<br>Technicians</div>
+  <div>QUALITY SERVICE<br>Done Right</div>
+  <div>HONEST & RELIABLE</div>
+  <div>FAST TURNAROUND</div>
 </section>
 
 <section class="section">
-  <h2>COMPLETE AUTO REPAIR & MAINTENANCE</h2>
-
+  <h2>SERVICES</h2>
   <div class="grid">
-    <div class="card"><img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc"><p>OIL CHANGES</p></div>
-    <div class="card"><img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537"><p>BRAKE SERVICE</p></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc"><p>OIL CHANGE</p></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537"><p>BRAKES</p></div>
     <div class="card"><img src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0"><p>DIAGNOSTICS</p></div>
     <div class="card"><img src="https://images.unsplash.com/photo-1615906655593-ad0386982a0f"><p>ENGINE REPAIR</p></div>
   </div>
 </section>
 
-<section class="section reviews">
+<section class="section">
   <h2>WHAT OUR CUSTOMERS SAY</h2>
 
   <div class="review-grid">
-    <div class="review"><p>“Amazing service. Honest, fast, and reliable.”</p><strong>★★★★★</strong></div>
-    <div class="review"><p>“Best mechanic around. Highly recommend.”</p><strong>★★★★★</strong></div>
-    <div class="review"><p>“Fair pricing and great communication.”</p><strong>★★★★★</strong></div>
+    <div class="review">“Amazing service. Honest and reliable.” ⭐⭐⭐⭐⭐</div>
+    <div class="review">“Best mechanic around.” ⭐⭐⭐⭐⭐</div>
+    <div class="review">“Fair pricing and great work.” ⭐⭐⭐⭐⭐</div>
   </div>
 
-<div style="margin-top:30px;">
-  <a href="https://g.page/r/CUl4cyc1e_S6EBM/review" class="btn-red" target="_blank">
-    Leave Us a Google Review
-  </a>
-
-  <br><br>
-
-  <a href="https://www.google.com/search?q=Willie's+Service+Farmingdale+NY" 
-     target="_blank" 
-     class="btn-dark">
-     VIEW OUR REVIEWS
-  </a>
-</div>
-  
+  <div style="margin-top:30px;">
+    <a href="https://g.page/r/CUl4cyc1e_S6EBM/review" class="btn-red" target="_blank">Leave Review</a>
+    <br><br>
+    <a href="https://www.google.com/search?q=Willie's+Service+Farmingdale+NY" target="_blank" class="btn-dark">View Reviews</a>
+  </div>
 </section>
 
-<section class="cert">
-  <h2>CERTIFIED LUXURY SPECIALISTS</h2>
+<section class="section">
+  <h2>FARMINGDALE NY AUTO REPAIR</h2>
+  <p style="max-width:700px; margin:auto;">
+    Willie’s Service provides expert auto repair in Farmingdale NY including BMW, Mercedes, Audi and more.
+    If you're searching for a reliable mechanic near you, call us today.
+  </p>
+</section>
 
-  <div class="brand-logos">
-    <img src="https://cdn.worldvectorlogo.com/logos/mercedes-benz-9.svg">
-    <img src="https://cdn.worldvectorlogo.com/logos/bmw-2.svg">
-    <img src="https://cdn.worldvectorlogo.com/logos/audi-9.svg">
-    <img src="https://cdn.worldvectorlogo.com/logos/lexus-2.svg">
-  </div>
+<section class="section">
+  <h2>FIND US</h2>
+  <iframe src="https://www.google.com/maps?q=846+Main+Street+Farmingdale+NY&output=embed"
+    width="100%" height="300" style="border:0; border-radius:10px;"></iframe>
 </section>
 
 <div class="bottom-bar">
-  <div><strong>CALL</strong><br>516-249-8495</div>
+  <div><strong>CALL</strong><br><a href="tel:5162498495" style="color:white;">516-249-8495</a></div>
   <div><strong>LOCATION</strong><br>846 Main Street, Farmingdale NY</div>
-  <div><strong>HOURS</strong><br>Mon–Fri: 8AM–5PM<br>Sat: 8AM–3PM</div>
+  <div><strong>HOURS</strong><br>Mon–Fri 8–5<br>Sat 8–3</div>
 </div>
 
-  <script>
+<script>
 function toggleMenu() {
   document.getElementById("nav-menu").classList.toggle("active");
 }
 </script>
+
 </body>
 </html>
