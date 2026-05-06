@@ -4,7 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Willie's Auto Service</title>
+<meta name="description" content="Willie's Auto Service in Farmingdale NY. Expert auto repair, oil changes, brakes, diagnostics. Call 516-249-8495 today.">
 
+<meta name="keywords" content="auto repair Farmingdale NY, mechanic near me, brake service, oil change, BMW repair, Mercedes repair">
+
+<meta name="author" content="Willie's Auto Service">
+  
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
@@ -166,7 +171,32 @@ nav a {
 .brand-logos img {
   height: 45px;
 }
+<section class="section">
+  <h2>FIND US</h2>
 
+  <iframe
+    src="https://www.google.com/maps?q=846+Main+Street+Farmingdale+NY&output=embed"
+    width="100%"
+    height="300"
+    style="border:0; border-radius:10px;"
+    allowfullscreen=""
+    loading="lazy">
+  </iframe>
+</section>
+<section class="section">
+  <h2>TRUSTED AUTO REPAIR IN FARMINGDALE, NY</h2>
+
+  <p style="max-width:700px; margin:auto; line-height:1.6;">
+    Willie’s Auto Service is your trusted local mechanic in Farmingdale, NY.
+    We provide expert auto repair, oil changes, brake service, diagnostics,
+    and engine repair for all makes and models including BMW, Mercedes-Benz,
+    Audi, and Lexus. 
+
+    If you're searching for a reliable “mechanic near me” in Farmingdale,
+    our certified technicians deliver honest, high-quality service to get you
+    back on the road fast. Call today or stop by our shop on Main Street.
+  </p>
+</section>  
 /* FOOTER */
 .bottom-bar {
   display: grid;
@@ -224,6 +254,33 @@ nav a {
     gap: 15px;
   }
 }
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* MOBILE NAV */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav a {
+    padding: 10px 0;
+    border-top: 1px solid #222;
+  }
+
+  nav.active {
+    display: flex;
+  }
+}
 </style>
 </head>
 
@@ -234,7 +291,9 @@ nav a {
     <img src="logo.png">
   </div>
 
-  <nav>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <nav id="nav-menu">
     <a href="#">HOME</a>
     <a href="#">SERVICES</a>
     <a href="#">CERTIFICATIONS</a>
@@ -243,7 +302,7 @@ nav a {
   </nav>
 
   <div class="call">
-    CALL NOW: 516-249-8495
+    CALL NOW: <a href="tel:5162498495">516-249-8495</a>
   </div>
 </header>
 
@@ -255,7 +314,11 @@ nav a {
 
     <div class="hero-buttons">
       <a href="tel:5162498495" class="btn-red">CALL NOW</a>
-      <a href="#" class="btn-dark">GET DIRECTIONS</a>
+      <a href="https://www.google.com/maps/dir/?api=1&destination=846+Main+Street+Farmingdale+NY" 
+   target="_blank" 
+   class="btn-dark">
+   GET DIRECTIONS
+</a>
     </div>
   </div>
 </section>
@@ -311,5 +374,10 @@ nav a {
   <div><strong>HOURS</strong><br>Mon–Fri: 8AM–5PM<br>Sat: 8AM–3PM</div>
 </div>
 
+  <script>
+function toggleMenu() {
+  document.getElementById("nav-menu").classList.toggle("active");
+}
+</script>
 </body>
 </html>
