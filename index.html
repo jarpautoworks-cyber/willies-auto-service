@@ -5,56 +5,73 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Willie's Auto Service</title>
 
-  <style>
-  * {
-    box-sizing: border-box;
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Make everything flexible */
+.container, .row, .grid, .services, .brand-logos {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Default desktop layout */
+.brand-logos {
+  justify-content: center;
+  gap: 40px;
+}
+
+/* Fix images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 🔥 MOBILE FIX */
+@media (max-width: 768px) {
+
+  /* Stack EVERYTHING */
+  .container, .row, .grid, .services, .brand-logos {
+    flex-direction: column !important;
+    align-items: center;
   }
 
-  body {
-    margin: 0;
-    overflow-x: hidden;
+  /* Make sections full width */
+  div, section {
+    width: 100% !important;
   }
 
-  img {
-    max-width: 100%;
-    height: auto;
+  /* Fix text sizing */
+  h1 {
+    font-size: 26px;
+    text-align: center;
   }
 
-  @media (max-width: 768px) {
-    .container {
-      padding: 15px;
-    }
-
-    .brand-logos {
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .services,
-    .grid,
-    .row {
-      flex-direction: column;
-    }
-
-    h1 {
-      font-size: 28px;
-    }
-
-    h2 {
-      font-size: 22px;
-    }
-
-    p {
-      font-size: 16px;
-    }
-
-    button, .btn {
-      width: 100%;
-      padding: 14px;
-      font-size: 16px;
-    }
+  h2 {
+    font-size: 20px;
+    text-align: center;
   }
-</style>
+
+  p {
+    font-size: 15px;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  /* Buttons full width */
+  button, .btn {
+    width: 100%;
+    max-width: 300px;
+    padding: 14px;
+  }
+}
+</style>  
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
