@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Willie's Auto Service</title>
 
+<meta name="description" content="Willie's Auto Service in Farmingdale NY. Expert auto repair, oil changes, brakes, diagnostics. Call 516-249-8495 today.">
+
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
@@ -20,10 +22,13 @@ body {
 /* HEADER */
 header {
   display: flex;
-  justify-content: flex-end;
-  padding: 20px 40px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
   background: black;
 }
+
+.logo img { height: 60px; }
 
 nav a {
   color: white;
@@ -31,50 +36,30 @@ nav a {
   text-decoration: none;
 }
 
+.call { color: red; font-weight: bold; }
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
 /* HERO */
 .hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background: linear-gradient(to right, #ffffff 50%, rgba(0,0,0,0.85)),
+  background: linear-gradient(to right, #ffffff 50%, rgba(0,0,0,0.8)),
               url('https://images.unsplash.com/photo-1619767886558-efdc259cde1a');
   background-size: cover;
-  background-position: center;
-  min-height: 520px;
+  min-height: 500px;
 }
 
-/* LOGO */
-.hero-logo {
-  margin-bottom: 20px;
-}
+.hero-left { padding: 80px 60px; }
 
-.hero-logo img {
-  width: 500px;   /* 👈 YOU CAN CHANGE THIS NUMBER */
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
+.hero-left h1 { font-size: 60px; }
+.hero-left h2 { font-size: 24px; }
+.hero-left p { color: #444; }
 
-/* HERO TEXT */
-.hero-left {
-  padding: 80px 60px;
-}
-
-.hero-left h1 {
-  font-size: 60px;
-  color: black;
-  margin: 10px 0;
-}
-
-.hero-left h2 {
-  font-size: 24px;
-  color: black;
-}
-
-.hero-left p {
-  color: #444;
-}
-
-/* BUTTONS */
 .btn-red, .btn-dark {
   padding: 12px 20px;
   text-decoration: none;
@@ -94,6 +79,48 @@ nav a {
   text-align: center;
 }
 
+/* SECTIONS */
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  color: black;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card img { width: 100%; height: 150px; object-fit: cover; }
+
+/* REVIEWS */
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 20px;
+}
+
+.review {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* CERT */
+.brand-logos {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
 /* FOOTER */
 .bottom-bar {
   display: grid;
@@ -106,10 +133,28 @@ nav a {
 /* MOBILE */
 @media (max-width: 768px) {
 
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .menu-toggle { display: block; }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav.active { display: flex; }
+
+  nav a {
+    margin: 10px 0;
+  }
+
   .hero {
     grid-template-columns: 1fr;
     background: url('https://images.unsplash.com/photo-1619767886558-efdc259cde1a');
-    background-size: cover;
   }
 
   .hero-left {
@@ -117,17 +162,10 @@ nav a {
     text-align: center;
   }
 
-  .hero-logo img {
-    width: 260px;
-  }
-
   .hero-left h1 { font-size: 34px; }
   .hero-left h2 { font-size: 18px; }
 
-  .features {
-    flex-direction: column;
-    gap: 15px;
-  }
+  .features { flex-direction: column; gap: 15px; }
 
   .bottom-bar {
     grid-template-columns: 1fr;
@@ -140,32 +178,32 @@ nav a {
 <body>
 
 <header>
-  <nav>
+  <div class="logo"><img src="logo.png"></div>
+
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <nav id="nav-menu">
     <a href="#">HOME</a>
     <a href="#">SERVICES</a>
+    <a href="#">CERTIFICATIONS</a>
     <a href="#">ABOUT</a>
     <a href="#">CONTACT</a>
   </nav>
+
+  <div class="call">
+    <a href="tel:5162498495" style="color:red;">516-249-8495</a>
+  </div>
 </header>
 
 <section class="hero">
-
   <div class="hero-left">
-
-    <!-- LOGO -->
-    <div class="hero-logo">
-      <img src="logo.png">
-    </div>
-
     <h1>WILLIE’S SERVICE</h1>
     <h2>EXPERT AUTO REPAIR YOU CAN TRUST</h2>
     <p>Certified BMW & Mercedes specialists. Honest, fast, reliable service.</p>
 
     <a href="tel:5162498495" class="btn-red">CALL NOW</a>
     <a href="https://www.google.com/maps/dir/?api=1&destination=846+Main+Street+Farmingdale+NY" target="_blank" class="btn-dark">GET DIRECTIONS</a>
-
   </div>
-
 </section>
 
 <section class="features">
@@ -175,11 +213,57 @@ nav a {
   <div>FAST TURNAROUND</div>
 </section>
 
+<section class="section">
+  <h2>SERVICES</h2>
+  <div class="grid">
+    <div class="card"><img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc"><p>OIL CHANGE</p></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537"><p>BRAKES</p></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0"><p>DIAGNOSTICS</p></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1615906655593-ad0386982a0f"><p>ENGINE REPAIR</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>WHAT OUR CUSTOMERS SAY</h2>
+
+  <div class="review-grid">
+    <div class="review">“Amazing service. Honest and reliable.” ⭐⭐⭐⭐⭐</div>
+    <div class="review">“Best mechanic around.” ⭐⭐⭐⭐⭐</div>
+    <div class="review">“Fair pricing and great work.” ⭐⭐⭐⭐⭐</div>
+  </div>
+
+  <div style="margin-top:30px;">
+    <a href="https://g.page/r/CUl4cyc1e_S6EBM/review" class="btn-red" target="_blank">Leave Review</a>
+    <br><br>
+    <a href="https://www.google.com/search?q=Willie's+Service+Farmingdale+NY" target="_blank" class="btn-dark">View Reviews</a>
+  </div>
+</section>
+
+<section class="section">
+  <h2>FARMINGDALE NY AUTO REPAIR</h2>
+  <p style="max-width:700px; margin:auto;">
+    Willie’s Service provides expert auto repair in Farmingdale NY including BMW, Mercedes, Audi and more.
+    If you're searching for a reliable mechanic near you, call us today.
+  </p>
+</section>
+
+<section class="section">
+  <h2>FIND US</h2>
+  <iframe src="https://www.google.com/maps?q=846+Main+Street+Farmingdale+NY&output=embed"
+    width="100%" height="300" style="border:0; border-radius:10px;"></iframe>
+</section>
+
 <div class="bottom-bar">
-  <div><strong>CALL</strong><br>516-249-8495</div>
+  <div><strong>CALL</strong><br><a href="tel:5162498495" style="color:white;">516-249-8495</a></div>
   <div><strong>LOCATION</strong><br>846 Main Street, Farmingdale NY</div>
   <div><strong>HOURS</strong><br>Mon–Fri 8–5<br>Sat 8–3</div>
 </div>
+
+<script>
+function toggleMenu() {
+  document.getElementById("nav-menu").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
